@@ -20,6 +20,8 @@
   color: white; 
 }
 
+/* search input */
+
 .search{
   margin-top: 10px;
   display: flex;
@@ -51,6 +53,8 @@
   background: khaki;
 }
 
+/* main */
+
 .main-container{
   width: 100%;
   height: auto;
@@ -62,3 +66,69 @@
 .main-container h4{
   font-size: 25px;
 }
+
+/* icona (sole) */
+
+.main-container .icon{
+  font-size: 30px;
+  font-weight: 800;
+  animation: iconanimation 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes iconanimation{
+  from{
+    transform: scale(0.5,0.5);
+  }
+  to{
+    transform: scale(1,1);
+  }
+}
+
+/* responsive */
+
+@media only screen and (min-width: 600px){
+  .search-form input{
+    width: 70%;
+  }
+  .search button{
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .search-form input{
+    width: 70%;
+  }
+  .search button{
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .search-form input{
+    width: 80%;
+  }
+  .search button{
+    width: 18%;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .search-form input{
+    width: 80%;
+  }
+  .search button{
+    width: 18%;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .search-form input{
+    width: 90%;
+  }
+  .search button{
+    width: 8%;
+  }
+}
+

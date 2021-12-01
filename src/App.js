@@ -12,6 +12,9 @@ function App() {
         </div>
         <div className="main-container">
           <h3>titolo secondario</h3>
+          <div className="icon">
+            <i className="fa fa-sun"></i>
+          </div>
         </div>
       </div>
     </div>
