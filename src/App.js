@@ -1,14 +1,31 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import {getWeatherData} from './data/weatherapi';
 
 function App() {
+  const [weatherdata, setWeatherData] = useState(null);
+  const [city, setCity] = useState('Milan');
+  const [loading, setLoading] = useState(false);
+
+  const getData = async () => {
+    try{
+      const data = await getWeatherData(city)
+      console.log(data);
+    }catch(error){
+      console.log(error.message);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div className="App">
       <div className="card">
         <h2 className="title"><i className="fa fa-cloud"></i>titolo</h2>
         <div className="search">
-          <input type="text" placeholder="Scegli una città!" />
-          <button type="button">Cerca</button>
+          <input type="text" onChange={(e) => setCity(e.target.value)} placeholder="Scegli una città!" />
+          <button type="button" onClick={() => getData()}>Cerca</button>
         </div>
         <div className="main-container">
           <h3>titolo secondario</h3>
