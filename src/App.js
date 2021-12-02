@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import {getWeatherData} from './data/weatherapi';
-import {scaleLoader} from 'react-spinners';
+import {ScaleLoader} from 'react-spinners';
 
 function App() {
   const [weatherdata, setWeatherData] = useState(null);
@@ -40,7 +40,7 @@ function App() {
         </div>
         {loading ? (
           <div className="loader-container">
-            <scaleLoader 
+            <ScaleLoader 
               css={override}
               size={200}
               color = {"#fff"}
