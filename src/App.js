@@ -33,10 +33,10 @@ function App() {
   return (
     <div className="App">
       <div className="card">
-        <h2 className="title"><i className="fa fa-cloud"></i>titolo</h2>
+        <h2 className="title"><i className="fa fa-cloud"></i>Weather App</h2>
         <div className="search">
-          <input type="text" value = {city} onChange={(e) => setCity(e.target.value)} placeholder="Scegli una città!" />
-          <button type="button" onClick={() => getData()}>Cerca</button>
+          <input type="text" value = {city} onChange={(e) => setCity(e.target.value)} placeholder="Choose a city!" />
+          <button type="button" onClick={() => getData()}>Search</button>
         </div>
         {loading ? (
           <div className="loader-container">
@@ -52,7 +52,7 @@ function App() {
           <>
             {weatherdata !== null ? (
             <div className="main-container">
-              <h3>titolo secondario</h3>
+              <h3>Live Weather</h3>
               <div className="icon">
                 <img src={`http://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`} alt="img-icon" />
               </div>
